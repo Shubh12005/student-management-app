@@ -1,0 +1,92 @@
+:root {
+  --paper: #F8F5EE;
+  --paper-dark: #EDE5D5;
+  --paper-card: #FFFFFF;
+  --ink: #1E293B;
+  --ink-soft: #64748B;
+  --brass: #B48438;
+  --brass-dark: #916624;
+  --rule: #DCD3C1;
+  --rule-light: #ECE5D6;
+  --danger: #991B1B;
+  --ok: #166534;
+
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: light;
+  background-color: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif {
+  font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--paper-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4B9A2;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A99E86;
+}
+
+/* Typography utilities */
+.font-serif-classic {
+  font-family: 'Times New Roman', Times, Georgia, Garamond, serif;
+}
+
+.ledger-sans {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.ledger-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Smooth fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
